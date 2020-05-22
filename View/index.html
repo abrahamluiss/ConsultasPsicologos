@@ -28,6 +28,9 @@
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
 
+    <!--Slider Slippry-->
+    <link rel="stylesheet" href="css/slippry.css">
+
 
 </head>
 <body>
@@ -36,13 +39,13 @@
         <div class="container-fluid">
             <div class="row">
                 <!--Logotipo-->
-                <div class="col-lg-2">
+                <div class="col-xl-2">
                     <a href="#" class="logo">
-                        <img src="images/logo.png" alt="image/x-icon">
+                        <img src="images/logo.svg" alt="image/x-icon">
                     </a>
                 </div>
                 <!--Links de navegacion-->
-                <div class="col-lg-10">
+                <div class="col-xl-10">
                     <ul>
                         <li class="link-active"><a href="index.html">Inicio</a></li>
                         <li><a href="index.html#nosotros">Nosotros</a></li>
@@ -56,6 +59,18 @@
     <!--ends Navegacion-->
 
     <!--Slider-->
+    <section id="slider">
+        <ul id="slippry">
+            <!--<li><img src="https://via.placeholder.com/2000x800" alt=""></li>-->
+            <li>
+                <h3 class="left top_250">¿BUSCAS AYUDA?</h3>
+                <!--<p class="left top_300 white_bg">Empresa de psicologia encargada.</p>-->
+                <button class="left top_300 black">Comienza Ahora</button>
+                <img src="images/slide_01.jpg" alt=""></li>
+
+        </ul>
+
+    </section>
     <!--ends Slider-->
 
     <!--area de nosotros-->
@@ -71,8 +86,22 @@
 
 
     <!-- Boostrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script src="js/slippry.min.js"></script>
+
+    <!--Activacion y scripts-->
+    <script>
+        $(document).ready(function(){
+            /**Activando slippry**/
+            $("#slippry").slippry({
+                captions: false,
+                pager: false
+            });
+
+        });
+    </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 //Variables de colores
 $base: #060a0f
 $sec: #494949
-$outline: #ff6500
+$outline: #3d6f84
 $text: transparentize($sec, .5)
 
 //Estilos generales
@@ -29,10 +29,58 @@ p
     text-align: center
     margin: 0px auto
 
+/////////////Estilos de los inputs, textarea, buttons////////////////////////////////
+input,
+select,
+option,
+textarea
+    width: 100%
+    padding: 10px 15px
+    border: 1px solid $base
+    margin: 5px 0px
+    opacity: .5
+    @extend .tSlow
+    &:hover
+    &:focus
+        opacity: 1
+        color: $base
+textarea
+    max-width: 100%
+    min-width: 100%
+    min-height: 150px
+    max-height: 250px
+button
+    background-color: transparent
+    text-transform: uppercase
+    border: 1px solid $base
+    padding: 10px 20px
+    color: $base
+    font-size: 16px
+    letter-spacing: 1px
+    cursor: pointer
+    opacity: 7
+    border-radius: 10%
+    @extend .tSlow
+    &:hover
+        opacity: 1
+        background-color: $base
+        color: white
+.black
+    background-color: $base
+    opacity: 1
+    color: white
+    &:hover
+        background-color: $outline
+        border: 1px solid $outline
+    
+        
+
+    /////////////////////////////////////////////
+
 //Estilos de la barra de navegacion
 nav 
     width: 100%
-    background-color: lighten(red, 40 )
+    background-color: lighten(#b8cccd, 0 )
     padding: 10px 0px
     position: fixed
     border-bottom: 1px solid tranparent
@@ -44,7 +92,7 @@ nav
          @extend .tSlow   
     ul
         margin: 0px
-        margin-top: 8px
+        margin-top: 12px
         padding: 0px
         text-align: right
         @extend .tSlow
@@ -54,7 +102,7 @@ nav
                 &:after
                     width: 100%
                     background-color: $base
-                    @extend ,tSlow
+                    @extend .tSlow
                     
         li 
             display: inline-block
@@ -63,7 +111,9 @@ nav
                 position: relative
                 text-decoration: none
                 font-size: 16px
-                color: $text
+                text-transform: uppercase
+                color: transparentize(white, .2)
+                
                 @extend .tSlow
                 &:before
                     content: ""
@@ -92,3 +142,34 @@ nav
                         width: 100%
                         background-color: $base
                         
+/////////////////////// Estilos slider-slippry///////////////////////////////
+#slider
+    backface-visibility: hidden
+    -webkit-clip-path:  polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%)
+    -o-clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%)
+    clip-path:  polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%)
+#slippry
+    position: relative
+    h1,h2,h3,h4,h5,h6, button,p
+        position: absolute
+
+    p 
+        width: 190px
+    .white_bg
+        background-color: transparentize(white, .2)    
+        padding: 5px 10px
+    .left
+        left: 600px
+    .right
+        right: 600px
+    .top_250
+        top: 250px
+    .top_300
+        top: 300px
+    .top_375
+        top: 375px
+    .top_400
+        top: 400px
+    .top_450
+        top: 450px
+    
