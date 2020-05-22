@@ -5,7 +5,8 @@ $base: #060a0f
 $sec: #494949
 $outline: #3d6f84
 $text: transparentize($sec, .5)
-
+///////////////////////////// 
+////////////////////////////
 //Estilos generales
 
 a   
@@ -28,6 +29,10 @@ p
 .center
     text-align: center
     margin: 0px auto
+.main-title
+    font-size: 60px
+    font-weight: bold
+    color: $base
 
 /////////////Estilos de los inputs, textarea, buttons////////////////////////////////
 input,
@@ -80,12 +85,26 @@ button
 //Estilos de la barra de navegacion
 nav 
     width: 100%
-    background-color: lighten(#b8cccd, 0 )
+    background-color: transparent//lighten(#b8cccd, 0 )
     padding: 10px 0px
     position: fixed
     border-bottom: 1px solid tranparent
     z-index: 100
     @extend .tSlow
+    //animación de la barra al hacer hover
+    &:hover
+        background-color: #b8cccd
+        padding: 25px 0px
+        border: 1px solid transparentize($base, .9)
+        .logo
+            img 
+                width: 80%
+        ul  
+            margin-top: 8px
+            li 
+                a 
+                    color: $text
+    ////////////////
     .logo
      img
          width: 100%
