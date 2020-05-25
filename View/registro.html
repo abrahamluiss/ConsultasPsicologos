@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto psicologos</title>
+    <!--SEO-->
+    <meta name="author" contento="Proyectos">
+    <meta name="copyright" contento="&copy; Grupo de proyectos 2020. Todos los derechos reservados">
+    <meta name="email" content="admin@url.com">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Proyecto con chatbot para el curso de proyectos II 2020">
+    <meta name="keywords" content="psicologia, chatbot">
+    <!--Resposividad-->
+    <meta name="viewport" content="with=device, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <!--Social cards-->
+    <meta property="og:url" content="link.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Web proyecto de psicologia">
+    <meta property="og:description" content="Proyecto con chat para el area de psicologia">
+    <meta property="og:image" content="urlImg">
+
+	<!-- Bootstrap 4 CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	<!-- Estilos -->
+	<link rel="stylesheet" href="css/mains.css">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon/favicon.ico?v=2" type="image/x-icon">
+	<link rel="icon" href="favicon/favicon.ico?v=2" type="image/x-icon">
+
+	<!-- Slider Slippry -->
+	<link rel="stylesheet" href="css/slippry.css">
+
+	<!-- Font Awesome CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+
+
+
+
+</head>
+<body>
+	<!-- navegación -->
+	<nav id="nav" class="nav-overlay">
+		<div class="container-fluid">
+			<div class="row">
+				<!-- Nuestro logotipo -->
+				<div class="col-xl-2">
+					<a href="http://www.blackparadox.com" class="logo">
+						<img src="images/logo.svg" alt="Logo Blackparadox">
+					</a>
+				</div>
+				<!-- Nuestros links de navegación -->
+				<div class="col-xl-10">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#nosotros">Nosotros</a></li>
+                        <li><a href="psicologos.html">Psicólogos</a></li>
+                        <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+                    </ul>
+				</div>
+			</div>
+		</div>		
+	</nav>
+	<!-- ends navegación -->
+	
+	<!-- contacto -->
+	<div id="contacto">
+		<ul>
+			<!-- mapa -->
+			<li class="google-maps"><!-- Imagen del mapa de fondo --></li>
+			<!-- formulario -->
+			<li class="formulario">
+				<h3>Registrate</h3>
+				<form action="procesos/submit.php" method="POST">
+					<input type="name" name="nombre" placeholder="Tu nombre">
+					<input type="email" name="email" placeholder="Tu e-mail">
+					<input type="tel" name="tel" placeholder="Tu teléfono">
+					<textarea name="mensaje" placeholder="Tu mensaje..."></textarea>
+					<button type="submit" name="submit" class="black">Enviar mensaje</button>
+				</form>
+			</li>
+		</ul>
+	</div>
+	<!--  -->
+
+	<!-- footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<!--  -->
+
+				<!--  -->
+				<div class="col-xl-6">
+
+				</div>
+				<!--  -->
+				<div class="col-xl-4">
+					
+				</div>
+			</div>			
+		</div>
+	</footer>
+	<div class="copy">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p class="small">
+						&copy; 2020 Todos los derechos reservados</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ends footer -->
+
+
+
+
+
+
+	<!-- Bootstrap 4 JS CDN -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="js/slippry.min.js"></script>
+	<script src="js/lightbox.min.js"></script>
+
+	<!-- Activación y scripts -->
+	<script>
+	$(document).ready(function(){
+
+		/**
+		** Lightbox activando
+		**/
+		lightbox.option({
+			'resizeDuration' : 200 ,
+			'disableScrolling' : true
+		});
+
+		/**
+		Detectar el ancho del diamante, y poner el mismo valor en HEIGHT
+		**/
+		var dn_width = $('.grid-item').width();
+		$(".grid-item").css({
+			height : dn_width
+		});
+
+
+		/**
+		Agregamos la clase  al hacer scroll a la barra de navegación, después de llegar al contenedor de nosotros.
+		**/
+		$(window).scroll(function(){
+			var scroll = $(window).scrollTop();
+			if (scroll >= $("#nosotros").offset().top -300 )  {
+				$('#nav').addClass("nav-overlay");
+			} else {
+				$('#nav').removeClass("nav-overlay");
+			}
+		});
+		$(window).scroll();
+
+
+	});
+	</script>
+	
+</body>
+</html>
