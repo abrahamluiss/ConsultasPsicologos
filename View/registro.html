@@ -40,6 +40,7 @@
 
 
 
+
 </head>
 <body>
 	<!-- navegación -->
@@ -48,8 +49,8 @@
 			<div class="row">
 				<!-- Nuestro logotipo -->
 				<div class="col-xl-2">
-					<a href="http://www.blackparadox.com" class="logo">
-						<img src="images/logo.svg" alt="Logo Blackparadox">
+					<a href="http://www.link.com" class="logo">
+						<img src="images/logo.svg" alt="Logo ">
 					</a>
 				</div>
 				<!-- Nuestros links de navegación -->
@@ -66,21 +67,54 @@
 	</nav>
 	<!-- ends navegación -->
 	
-	<!-- contacto -->
+	<!-- registro -->
 	<div id="contacto">
 		<ul>
 			<!-- mapa -->
-			<li class="google-maps"><!-- Imagen del mapa de fondo --></li>
+			<li class="img-contact"><!-- Imagen del mapa de fondo --></li>
 			<!-- formulario -->
 			<li class="formulario">
 				<h3>Registrate</h3>
-				<form action="procesos/submit.php" method="POST">
-					<input type="name" name="nombre" placeholder="Tu nombre">
-					<input type="email" name="email" placeholder="Tu e-mail">
-					<input type="tel" name="tel" placeholder="Tu teléfono">
-					<textarea name="mensaje" placeholder="Tu mensaje..."></textarea>
-					<button type="submit" name="submit" class="black">Enviar mensaje</button>
+				<form action="../Model/registro.php" method="post">
+
+					<input type="name" name="txtNombre"  placeholder="Tu nombre">
+
+					<input type="apellido" name="txtApellido"  placeholder="Tu apellido">
+
+					<input type="email" name="email"  placeholder="Tu e-mail">
+
+					<input type="number" name="txtTel" placeholder="Tu teléfono">
+
+					<select name="CboExperiencia">
+						<option>¿Cuántos años de experiencia tienes?</option>
+						<option value="1-3">1 - 3 años</option>
+						<option value="4-7">4 - 7 años</option>
+						<option value="8-11">8 - 11 años</option>
+						<option value="12-15">12 - 15 años</option>
+						<option value="MasDe15">Más de 15 años</option>
+					</select>
+
+					<select name="CboFormAcadem">
+						<option>Formación academica</option>
+						<option value="Bachiller">Bachiller</option>
+						<option value="Licenciado">Licenciado</option>
+						<option value="Magister">Magister</option>
+						<option value="Doctorado">Doctorado</option>
+					</select>
+
+					<select name="CboEspecialidad">
+						<option>Especialidades</option>
+						<option value="Ansiedadyestrés">Ansiedad y estrés</option>
+						<option value="Depresión">Depresión</option>
+						<option value="Problemas de pareja">Problemas de pareja</option>
+						<option value="Autoestima">Autoestima</option>
+						<option value="Problemas conductuales">Problemas conductuales</option>
+						<option value="Desarrollo personal">Desarrollo personal</option>
+					</select>
+					<input type="submit" name = "register" class="black" value="Enviar">
+					<!-- <button type="submit" name="submit" class="black">Enviar </button>-->
 				</form>
+
 			</li>
 		</ul>
 	</div>
